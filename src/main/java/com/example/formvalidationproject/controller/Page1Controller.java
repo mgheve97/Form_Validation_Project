@@ -2,12 +2,17 @@ package com.example.formvalidationproject.controller;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
 import javafx.fxml.*;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
-
+import javafx.stage.Stage;
+import javafx.scene.Node;
+import com.example.formvalidationproject.datamodels.*;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import com.example.formvalidationproject.*;
@@ -19,8 +24,9 @@ public class Page1Controller implements Initializable{
 	@Autowired
 	UsersAdapterImpl userAdapter;
 	
-	String fname, mname, lname, suffix, age, pnum, email, gender, output, newfname, newmname,newlname, newemail;
-	Integer newage;
+	personaldatamodel datamodel1 = new personaldatamodel();
+	String fname, mname, lname, suffix, pnum, email, gender, output, newfname, newmname,newlname, newemail;
+	Integer age, newage;
 	String[] word;
 	StringBuilder outputBuilder = new StringBuilder();
 	
@@ -62,7 +68,17 @@ public class Page1Controller implements Initializable{
 	
 	}
 	
-	public void next() {
+	public void testnext(ActionEvent event) throws IOException{
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/page2scene.fxml"));
+		Parent root = loader.load();
+	    Scene newScene = new Scene(root);
+	    Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+	    primaryStage.setTitle("Form Validation - Page 2");
+	    primaryStage.setResizable(false);
+	    primaryStage.setScene(newScene);
+	}
+	
+	public void next(ActionEvent event) throws IOException {
 		converter();
 		if(fnametext.getText().isEmpty() == false && mnametext.getText().isEmpty() == false && lnametext.getText().isEmpty() == false &&
 		   pnumtext.getText().isEmpty() == false && emailtext.getText().isEmpty() == false && agetext.getText().isEmpty() == false) {
@@ -77,7 +93,18 @@ public class Page1Controller implements Initializable{
 			emailtext.setText("");
 			agetext.setText("");
 			malerbtn.setSelected(false);
-			fmalerbtn.setSelected(false);	
+			fmalerbtn.setSelected(false);
+			
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/page2scene.fxml"));
+			Parent root = loader.load();
+		    Scene newScene = new Scene(root);
+		    Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		    primaryStage.setTitle("Form Validation - Page 2");
+		    primaryStage.setResizable(false);
+		    primaryStage.setScene(newScene);
+		    
+		    
+			
 		}
 	}
 	
@@ -167,7 +194,7 @@ public class Page1Controller implements Initializable{
 			}
             else {
                 errage.setText("");
-                age = newValue;
+                age = Integer.parseInt(newValue);
             }
         });	
 		
@@ -250,7 +277,7 @@ public class Page1Controller implements Initializable{
 		}
 		
 		if(age != null) {
-			newage = Integer.parseInt(age);
+			newage = age;
 		}
 		
 		if(suffix != null) {

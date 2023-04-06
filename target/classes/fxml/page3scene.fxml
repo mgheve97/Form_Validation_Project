@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="707.0" prefWidth="577.0" style="-fx-background-color: gray; -fx-border-radius: 18px;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.formvalidationproject.controller.Page3Controller">
+   <children>
+    <AnchorPane layoutX="18.0" layoutY="21.0" minHeight="0.0" minWidth="0.0" prefHeight="622.0" prefWidth="531.0" style="-fx-background-color: White; -fx-border-radius: 18px;" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="23.0">
+         <children>
+            <Label layoutX="179.0" layoutY="14.0" text="CONFIRM INFORMATION" AnchorPane.leftAnchor="179.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="45.0" text="PERSONAL INFORMATION" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="50.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="86.0" text="First Name:" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="76.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="first_name" layoutX="25.0" layoutY="106.0" text="Output" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="96.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="178.0" layoutY="86.0" text="Middle name:" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="76.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="middle_name" layoutX="178.0" layoutY="106.0" text="Output" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="96.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="139.0" text="Last Name:" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="126.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="last_name" layoutX="25.0" layoutY="160.0" text="Output" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="146.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="181.0" layoutY="139.0" text="Suffix: " AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="126.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="suffix" layoutX="178.0" layoutY="160.0" text="Output" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="146.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="192.0" text="Age:" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="176.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="age" layoutX="26.0" layoutY="215.0" text="Output" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="196.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="178.0" layoutY="192.0" text="Gender:" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="176.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="gender" layoutX="178.0" layoutY="215.0" text="Output" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="196.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="271.0" text="CONTACT INFORMATION" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="266.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="301.0" text="Phone Number:" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="292.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="phone_number" layoutX="23.0" layoutY="321.0" text="Output" AnchorPane.topAnchor="312.0" />
+            <Label layoutX="181.0" layoutY="301.0" text="Email Address:" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="292.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="email_address" layoutX="181.0" layoutY="321.0" text="Output" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="312.0" />
+            <Label layoutX="29.0" layoutY="399.0" text="ADDRESS INFORMATION" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="392.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="429.0" text="Country:" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="418.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="country" layoutX="29.0" layoutY="449.0" text="Output" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="438.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="479.0" text="House Number:" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="468.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="house_number" layoutX="29.0" layoutY="499.0" text="Output" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="488.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="173.0" layoutY="477.0" text="Street:" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="468.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="street" layoutX="173.0" layoutY="497.0" text="Output" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="488.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="529.0" text="Baranggay:" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="518.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="brgy" layoutX="29.0" layoutY="549.0" text="Output" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="538.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="173.0" layoutY="527.0" text="City:" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="518.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="city" layoutX="173.0" layoutY="547.0" text="Output" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="538.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="579.0" text="Province:" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="568.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="province" layoutX="29.0" layoutY="599.0" text="Output" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="588.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="173.0" layoutY="577.0" text="Zipcode:" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="568.0">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="zipcode" layoutX="173.0" layoutY="597.0" text="Output" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="586.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Line endX="381.0" layoutX="124.0" layoutY="246.0" startX="-100.0" stroke="GREY" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="236.0" />
+            <Line endX="378.5" layoutX="120.0" layoutY="371.0" startX="-100.0" stroke="GREY" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="352.0" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="submitbtn" onAction="#submitbtn" layoutX="477.0" layoutY="658.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="77.0" style="-fx-background-color: #404040;" text="Submit" textFill="WHITE" />
+      <Button fx:id="backbtn" layoutX="389.0" layoutY="658.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="77.0" style="-fx-background-color: White;" text="Back" />
+   </children>
+</AnchorPane>

@@ -37,7 +37,7 @@ public class FormvalidationProjectApplication extends Application {
 		fxmlloader.setLocation(getClass().getResource("/fxml/page1scene.fxml"));
 		rootNode = fxmlloader.load();
 		primaryStage.setTitle("Form Validation - Page 1");
-		Scene scene = new Scene(rootNode, 443, 535);
+		Scene scene = new Scene(rootNode);
 		primaryStage.setScene(scene);
 		primaryStage.setResizable(false);
 		primaryStage.show();
